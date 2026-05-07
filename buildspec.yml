@@ -12,10 +12,7 @@ phases:
       - echo Running buuild
   post_build:
     commands:
-      - echo "Deploying to S3..."
-      - aws s3 sync . s3://doctor-website-build/
       - echo Build completed successfully
-
 artifacts:
   files:
     - "**/*" # Include all files in the artifact
